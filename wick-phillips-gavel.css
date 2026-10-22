@@ -122,7 +122,7 @@
 .da-field-radio .labelauty-checked-image,
 .da-field-checkboxes .labelauty-checked-image {
   background: var(--wp-navy) !important;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--wp-navy);   /* removes Gavel's purple ring */
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--wp-navy) !important;   /* removes Gavel's purple ring */
 }
 
 /* Shapes: squares for checkboxes, circles for radios */
