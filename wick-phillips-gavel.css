@@ -83,7 +83,7 @@
 .da-field-checkboxes input.labelauty + label {
   background: var(--wp-surface) !important;
   color: var(--wp-ink) !important;
-  border: 2px solid var(--wp-line) !important;
+  /* border: 2px solid var(--wp-line) !important; */
   border-radius: 4px; 
 }
 .da-field-radio input.labelauty + label:hover,
