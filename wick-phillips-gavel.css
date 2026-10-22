@@ -184,14 +184,12 @@ button.btn.btn-sm.btn-secondary.dacollectadd:hover {
   color: #FFFFFF !important;
 }
 button.btn.btn-link.btn-da.daquestionbackbutton.danonsubmit {
-color: var(--wp-navy-dark) !important;
+  color: var(--wp-navy-dark) !important;
 }
 button.btn.btn-secondary.btn-da {
-border-color: var(--wp-navy-dark) !important;
-color: var(--wp-navy-dark) !important;
+  border-color: var(--wp-navy-dark) !important;
+  color: var(--wp-navy-dark) !important;
 }
-
-
 
 /* ---------- "Save link to continue later" link ---------- */
 .daundertext a,
@@ -313,7 +311,9 @@ button.btn.btn-da:focus-visible,
   background: var(--wp-navy);
 }
 
-.nav-pills.nav-link:not(.active):not(.text-muted)::after{
-color: var(--wp-navy) !important;
+/* ---------- Sidebar: checkmark on completed sections ----------
+   Gavel draws it as ::after on each nav link. The extra .nav and
+   !important make this rule beat Gavel's. */
+.nav.nav-pills .nav-link:not(.active):not(.text-muted)::after {
+  color: var(--wp-navy) !important;
 }
-
