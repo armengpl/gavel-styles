@@ -125,6 +125,11 @@
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--wp-navy) !important;   /* white gap + navy ring (replaces Gavel's purple ring) */
 }
 
+/* Checked checkboxes: plain navy box, no outer ring */
+.da-field-checkboxes .labelauty-checked-image {
+  box-shadow: none !important;
+}
+
 /* Shapes: squares for checkboxes, circles for radios */
 .da-field-checkboxes .labelauty-unchecked-image,
 .da-field-checkboxes .labelauty-checked-image { border-radius: 4px !important; }
@@ -239,30 +244,15 @@ button.btn.btn-da:focus-visible,
   color: #FFFFFF !important;
 }
 
-/* ---------- Plain dropdown options: same colors as the combobox list ----------
-   Kept in its own block because browsers that don't support styling
-   this list would otherwise throw out the combobox rules too. */
-@supports (appearance: base-select) {
-  .daformfields select.dasingleselect,
-  .daformfields select.dasingleselect::picker(select) {
-    appearance: base-select;
-  }
-  .daformfields select.dasingleselect::picker-icon,
-  .daformfields select.dasingleselect option::checkmark { display: none; }
-
-  .daformfields select.dasingleselect::picker(select) {
-    border-color: var(--wp-navy);                        /* list border */
-  }
-  .daformfields select.dasingleselect option {
-    color: var(--wp-ink);                                /* normal option */
-    background: var(--wp-surface);
-  }
-  .daformfields select.dasingleselect option:hover {
-    color: var(--wp-navy);                               /* hovered option */
-    background: var(--wp-tint);
-  }
-  .daformfields select.dasingleselect option:checked {
-    color: #FFFFFF;                                      /* chosen option */
-    background: var(--wp-navy);
-  }
+/* ---------- Plain dropdown options ----------
+   The dropdown keeps the browser's normal behavior. Browsers only let
+   a page color the options themselves; the hover highlight is drawn
+   by the operating system and can't be changed. */
+.daformfields select.dasingleselect option {
+  color: var(--wp-ink);
+  background: var(--wp-surface);
+}
+.daformfields select.dasingleselect option:checked {
+  color: #FFFFFF;
+  background: var(--wp-navy);
 }
