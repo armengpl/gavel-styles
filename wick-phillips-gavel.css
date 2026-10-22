@@ -52,7 +52,7 @@ button.btn.btn-da.btn-secondary:active {
   color: black !important;
 }
 
-
-.daundertext {
-color: var(--wp-navy-dark) !important;
+.daundertext a:hover,
+.daundertext a:focus {
+  color: var(--wp-navy-dark) !important;
 }
