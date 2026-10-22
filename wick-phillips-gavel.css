@@ -180,7 +180,7 @@ button.btn.btn-sm.btn-secondary.dacollectadd:hover {
   border-color: var(--wp-navy-dark) !important;
   color: #FFFFFF !important;
 }
-btn.btn-link.btn-da.daquestionbackbutton.danonsubmit {
+button.btn.btn-link.btn-da.daquestionbackbutton.danonsubmit {
 color: var(--wp-navy-dark) !important;
 }
 /* ---------- "Save link to continue later" link ---------- */
