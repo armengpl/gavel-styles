@@ -183,6 +183,13 @@ button.btn.btn-sm.btn-secondary.dacollectadd:hover {
 button.btn.btn-link.btn-da.daquestionbackbutton.danonsubmit {
 color: var(--wp-navy-dark) !important;
 }
+button.btn.btn-secondary.btn-da {
+border-color: var(--wp-navy-dark) !important;
+color: var(--wp-navy-dark) !important;
+}
+
+
+
 /* ---------- "Save link to continue later" link ---------- */
 .daundertext a,
 .daundertext a:visited {
