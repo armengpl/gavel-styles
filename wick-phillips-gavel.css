@@ -151,8 +151,10 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 }
 
 /* ---------- Checkbox buttons (labelauty) ---------- */
-/* The whole option button stays white with a navy border; only the
-   little box turns navy with a white check when selected. */
+/* The box is drawn on Gavel's own icon spans, so it keeps Gavel's
+   size and position. We only recolor it and draw our own check. */
+
+/* Option rows */
 .da-field-checkboxes label.labelauty,
 .da-field-checkboxes input.labelauty + label {
   background: var(--wp-surface) !important;
@@ -160,50 +162,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
   border: 2px solid var(--wp-line) !important;
   border-radius: 4px;
 }
-
-/* Selected option: navy border and light tint so the row reads as chosen */
 .da-field-checkboxes input.labelauty:checked + label,
-.da-field-checkboxes label[aria-checked="true"] {
-  background: var(--wp-tint) !important;
-  color: var(--wp-navy) !important;
-  border-color: var(--wp-navy) !important;
-  font-weight: 600;
-}
-
-/* Shared box shape for both states */
-.da-field-checkboxes .labelauty-unchecked-image i,
-.da-field-checkboxes .labelauty-checked-image i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.4em;
-  height: 1.4em;
-  border-radius: 3px;
-  font-size: 0.9em;
-  vertical-align: middle;
-}
-
-/* Unchecked: empty white box with navy outline */
-.da-field-checkboxes .labelauty-unchecked-image i {
-  border: 2px solid var(--wp-navy);
-  background: var(--wp-surface);
-  color: transparent !important;   /* hides the icon-font square */
-}
-.da-field-checkboxes .labelauty-unchecked-image { color: var(--wp-navy) !important; }
-
-/* Checked: solid navy box, white check */
-.da-field-checkboxes .labelauty-checked-image i {
-  background: var(--wp-navy) !important;
-  border: 2px solid var(--wp-navy);
-  color: #FFFFFF !important;
-}
-
-/* Extra-strength overrides in case Gavel's theme colors the box itself */
-.da-field-checkboxes label .labelauty-checked-image,
-.da-field-checkboxes label .labelauty-unchecked-image {
-  background: transparent !important;
-  box-shadow: none !important;
-}
+.da-field-checkboxes label[aria-checked="true"],
 .da-field-checkboxes label.btn-primary,
 .da-field-checkboxes label.btn-primary:hover,
 .da-field-checkboxes label.btn-primary:focus {
@@ -211,8 +171,42 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
   color: var(--wp-navy) !important;
   border-color: var(--wp-navy) !important;
 }
-.da-field-checkboxes label.btn-primary .labelauty-checked-image i {
+
+/* Unchecked box: white with navy outline */
+.da-field-checkboxes label .labelauty-unchecked-image {
+  background: var(--wp-surface) !important;
+  border: 2px solid var(--wp-navy) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+/* Checked box: solid navy */
+.da-field-checkboxes label .labelauty-checked-image {
+  position: relative;
   background: var(--wp-navy) !important;
-  border-color: var(--wp-navy) !important;
-  color: #FFFFFF !important;
+  border: 2px solid var(--wp-navy) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+/* Hide Gavel's icon glyphs so they can't add a second color */
+.da-field-checkboxes label .labelauty-unchecked-image i,
+.da-field-checkboxes label .labelauty-checked-image i,
+.da-field-checkboxes label .labelauty-unchecked-image svg,
+.da-field-checkboxes label .labelauty-checked-image svg {
+  visibility: hidden !important;
+}
+
+/* White checkmark drawn with CSS */
+.da-field-checkboxes label .labelauty-checked-image::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 30%;
+  height: 55%;
+  border: solid #FFFFFF;
+  border-width: 0 3px 3px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: transparent;
 }
