@@ -73,7 +73,7 @@ input[type="tel"], input[type="number"], input[type="date"], select, textarea {
 .form-check-input { border: 2px solid var(--wp-navy) !important; }
 .form-check-input:checked {
   background-color: var(--wp-navy) !important;
-  border-color: var(--wp-navy) !important;
+  /* border-color: var(--wp-navy) !important; */
 }
 
 /* Choice buttons (radio/checkbox rendered as buttons) */
