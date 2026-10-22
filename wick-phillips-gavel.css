@@ -18,8 +18,8 @@
   --wp-tint:        #EEF2F7;  /* light panel bg      */
   --wp-error:       #A8071A;  /*                     –  7.6:1 */
   --wp-focus:       #F2B700;  /* focus ring, visible on navy & white */
-  --wp-font: Georgia, "Times New Roman", serif;
-  --wp-font-ui: "Helvetica Neue", Arial, sans-serif;
+  /*--wp-font: Georgia, "Times New Roman", serif;
+  --wp-font-ui: "Helvetica Neue", Arial, sans-serif; */
 }
 
 /* ---------- Active navigation tab ---------- */
@@ -35,12 +35,7 @@
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 }
-.da-page-header h1,
-#daMainQuestion {
-  font-family: var(--wp-font) !important;
-  color: var(--wp-navy) !important;
-  font-weight: 700;
-}
+
 
 /* ---------- Field labels ---------- */
 .da-form-label,
@@ -88,8 +83,8 @@
 .da-field-checkboxes input.labelauty + label {
   background: var(--wp-surface) !important;
   color: var(--wp-ink) !important;
-  border: 2px solid var(--wp-line) !important;
-  border-radius: 4px;
+  /* border: 2px solid var(--wp-line) !important;
+  border-radius: 4px; */
 }
 .da-field-radio input.labelauty + label:hover,
 .da-field-checkboxes input.labelauty + label:hover {
@@ -105,7 +100,7 @@
 .da-field-checkboxes label.btn-primary {
   background: var(--wp-tint) !important;
   color: var(--wp-navy) !important;
-  border-color: var(--wp-navy) !important;
+  /* border-color: var(--wp-navy) !important; */
   font-weight: 600;
 }
 
@@ -129,14 +124,14 @@
 .da-field-radio .labelauty-unchecked-image,
 .da-field-checkboxes .labelauty-unchecked-image {
   background: var(--wp-surface) !important;
-  border: 2px solid var(--wp-navy) !important;
+ /* border: 2px solid var(--wp-navy) !important; */
 }
 
 /* Checked: solid navy */
 .da-field-radio .labelauty-checked-image,
 .da-field-checkboxes .labelauty-checked-image {
   background: var(--wp-navy) !important;
-  border: 2px solid var(--wp-navy) !important;
+ /* border: 2px solid var(--wp-navy) !important; */
 }
 
 /* Shapes: squares for checkboxes, circles for radios */
