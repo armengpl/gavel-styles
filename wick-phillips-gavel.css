@@ -149,3 +149,51 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ---------- Checkbox buttons (labelauty) ---------- */
+/* The whole option button stays white with a navy border; only the
+   little box turns navy with a white check when selected. */
+.da-field-checkboxes label.labelauty,
+.da-field-checkboxes input.labelauty + label {
+  background: var(--wp-surface) !important;
+  color: var(--wp-ink) !important;
+  border: 2px solid var(--wp-line) !important;
+  border-radius: 4px;
+}
+
+/* Selected option: navy border and light tint so the row reads as chosen */
+.da-field-checkboxes input.labelauty:checked + label,
+.da-field-checkboxes label[aria-checked="true"] {
+  background: var(--wp-tint) !important;
+  color: var(--wp-navy) !important;
+  border-color: var(--wp-navy) !important;
+  font-weight: 600;
+}
+
+/* Shared box shape for both states */
+.da-field-checkboxes .labelauty-unchecked-image i,
+.da-field-checkboxes .labelauty-checked-image i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+/* Unchecked: empty white box with navy outline */
+.da-field-checkboxes .labelauty-unchecked-image i {
+  border: 2px solid var(--wp-navy);
+  background: var(--wp-surface);
+  color: transparent !important;   /* hides the icon-font square */
+}
+.da-field-checkboxes .labelauty-unchecked-image { color: var(--wp-navy) !important; }
+
+/* Checked: solid navy box, white check */
+.da-field-checkboxes .labelauty-checked-image i {
+  background: var(--wp-navy) !important;
+  border: 2px solid var(--wp-navy);
+  color: #FFFFFF !important;
+}
