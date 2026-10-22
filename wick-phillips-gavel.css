@@ -23,7 +23,7 @@
   --wp-font-ui: "Helvetica Neue", Arial, sans-serif;
 }
 
-.nav.nav-pills.nav-link.active {
+.nav.nav-pills .nav-link.active {
     background: var(--primary-light);
     color: #14284B;
     font-weight: bold;
