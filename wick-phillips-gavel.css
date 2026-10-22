@@ -53,10 +53,9 @@ button.btn.btn-da.btn-secondary:active {
 }
 
 .daundertext a,
-.daundertext a:visited {
-  color: var(--wp-steel) !important;
-  text-decoration: underline !important;
-  font-weight: 600;
+ {
+  color: var(--wp-navy-dark) !important;
+  
 }
 
 .daundertext a:hover,
