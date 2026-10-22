@@ -31,9 +31,7 @@
 
 /* ---------- Question heading ---------- */
 .da-page-header {
-  border-bottom: 2px solid var(--wp-navy);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
+  border-bottom-color: var(--wp-navy) !important;
 }
 
 /* ---------- Field labels ---------- */
@@ -48,8 +46,7 @@
 .daformfields .form-select {
   background-color: var(--wp-surface) !important;
   color: var(--wp-ink) !important;
-  border: 2px solid var(--wp-line) !important;
-  border-radius: 4px;
+  border-color: var(--wp-line) !important;
 }
 .daformfields .form-control:hover,
 .daformfields .form-select:hover {
@@ -62,14 +59,10 @@
 }
 
 /* Combobox: text box and its toggle button read as one control */
-.daformfields .combobox-container .input-group .form-select {
-  border-right: none !important;
-}
 .daformfields .dacomboboxtoggle {
   background: var(--wp-surface) !important;
   color: var(--wp-navy) !important;
-  border: 2px solid var(--wp-line) !important;
-  border-left: none !important;
+  border-color: var(--wp-line) !important;
 }
 .daformfields .dacomboboxtoggle:hover {
   background: var(--wp-tint) !important;
@@ -110,37 +103,25 @@
 .da-field-checkboxes .labelauty-unchecked-image,
 .da-field-checkboxes .labelauty-checked-image {
   position: relative;
-  box-shadow: none !important;
-  /* Same fixed size in both states so the circle/box never shrinks */
-  box-sizing: border-box !important;
-  width: 1.4em !important;
-  height: 1.4em !important;
-  min-width: 1.4em !important;
-  padding: 0 !important;
-  line-height: 1 !important;
-  font-size: 1em !important;
-  vertical-align: middle;
-  overflow: hidden;
 }
 .da-field-radio .labelauty-unchecked-image i,
 .da-field-radio .labelauty-checked-image i,
 .da-field-checkboxes .labelauty-unchecked-image i,
 .da-field-checkboxes .labelauty-checked-image i {
-  display: none !important;
+  visibility: hidden !important;  /* hidden but still sets Gavel's default size */
 }
 
 /* Unchecked: white with navy outline */
 .da-field-radio .labelauty-unchecked-image,
 .da-field-checkboxes .labelauty-unchecked-image {
   background: var(--wp-surface) !important;
-  border: 2px solid var(--wp-navy) !important;
+  box-shadow: inset 0 0 0 2px var(--wp-navy) !important;
 }
 
 /* Checked: solid navy */
 .da-field-radio .labelauty-checked-image,
 .da-field-checkboxes .labelauty-checked-image {
   background: var(--wp-navy) !important;
-  border: 2px solid var(--wp-navy) !important;
 }
 
 /* Shapes: squares for checkboxes, circles for radios */
@@ -233,9 +214,7 @@ button.btn.btn-da:focus-visible,
 /* ---------- Combobox option list ---------- */
 .combobox-container .dropdown-menu,
 .daformfields .dropdown-menu {
-  border: 2px solid var(--wp-navy) !important;
-  border-radius: 4px;
-  padding: 0.25rem 0;
+  border-color: var(--wp-navy) !important;
 }
 .combobox-container .dropdown-menu .dropdown-item,
 .combobox-container .dropdown-menu li a,
