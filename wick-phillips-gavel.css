@@ -184,8 +184,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 .da-field-checkboxes label .labelauty-checked-image {
   position: relative;
   background: var(--wp-navy) !important;
-  border: 2px solid var(--wp-navy) !important;
-  border-radius: 4px !important;
+  /* border: 2px solid var(--wp-navy) !important;
+  border-radius: 4px !important; */
   box-shadow: none !important;
 }
 
