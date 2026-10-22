@@ -168,7 +168,10 @@ button.btn.btn-da.btn-primary:focus,
 button.btn.btn-da.btn-primary:active,
 button.btn.btn-sm.btn-secondary.dacollectadd,
 button.btn.btn-sm.btn-secondary.dacollectadd:focus,
-button.btn.btn-sm.btn-secondary.dacollectadd:active {
+button.btn.btn-sm.btn-secondary.dacollectadd:active,
+a.btn.btn-sm.btn-secondary,
+a.btn.btn-sm.btn-secondary:focus,
+a.btn.btn-sm.btn-secondary:active {
   background: var(--wp-navy) !important;
   border-color: var(--wp-navy) !important;
   color: #FFFFFF !important;
