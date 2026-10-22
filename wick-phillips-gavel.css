@@ -197,3 +197,22 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
   border: 2px solid var(--wp-navy);
   color: #FFFFFF !important;
 }
+
+/* Extra-strength overrides in case Gavel's theme colors the box itself */
+.da-field-checkboxes label .labelauty-checked-image,
+.da-field-checkboxes label .labelauty-unchecked-image {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.da-field-checkboxes label.btn-primary,
+.da-field-checkboxes label.btn-primary:hover,
+.da-field-checkboxes label.btn-primary:focus {
+  background: var(--wp-tint) !important;
+  color: var(--wp-navy) !important;
+  border-color: var(--wp-navy) !important;
+}
+.da-field-checkboxes label.btn-primary .labelauty-checked-image i {
+  background: var(--wp-navy) !important;
+  border-color: var(--wp-navy) !important;
+  color: #FFFFFF !important;
+}
