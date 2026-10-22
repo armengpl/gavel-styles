@@ -36,7 +36,6 @@
   padding-bottom: 0.5rem;
 }
 
-
 /* ---------- Field labels ---------- */
 .da-form-label,
 .da-field-container > .col-form-label {
@@ -84,7 +83,7 @@
   background: var(--wp-surface) !important;
   color: var(--wp-ink) !important;
   /* border: 2px solid var(--wp-line) !important; */
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 .da-field-radio input.labelauty + label:hover,
 .da-field-checkboxes input.labelauty + label:hover {
@@ -100,7 +99,7 @@
 .da-field-checkboxes label.btn-primary {
   background: var(--wp-tint) !important;
   color: var(--wp-navy) !important;
-   border-color: var(--wp-navy) !important; 
+  border-color: var(--wp-navy) !important;
   font-weight: 600;
 }
 
@@ -112,26 +111,36 @@
 .da-field-checkboxes .labelauty-checked-image {
   position: relative;
   box-shadow: none !important;
+  /* Same fixed size in both states so the circle/box never shrinks */
+  box-sizing: border-box !important;
+  width: 1.4em !important;
+  height: 1.4em !important;
+  min-width: 1.4em !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  font-size: 1em !important;
+  vertical-align: middle;
+  overflow: hidden;
 }
 .da-field-radio .labelauty-unchecked-image i,
 .da-field-radio .labelauty-checked-image i,
 .da-field-checkboxes .labelauty-unchecked-image i,
 .da-field-checkboxes .labelauty-checked-image i {
-  visibility: hidden !important;
+  display: none !important;
 }
 
 /* Unchecked: white with navy outline */
 .da-field-radio .labelauty-unchecked-image,
 .da-field-checkboxes .labelauty-unchecked-image {
   background: var(--wp-surface) !important;
-  border: 2px solid var(--wp-navy) !important; 
+  border: 2px solid var(--wp-navy) !important;
 }
 
 /* Checked: solid navy */
 .da-field-radio .labelauty-checked-image,
 .da-field-checkboxes .labelauty-checked-image {
   background: var(--wp-navy) !important;
-  border: 2px solid var(--wp-navy) !important; 
+  border: 2px solid var(--wp-navy) !important;
 }
 
 /* Shapes: squares for checkboxes, circles for radios */
@@ -219,4 +228,33 @@ button.btn.btn-da:focus-visible,
 .daformfields .text-danger {
   color: var(--wp-error) !important;
   font-weight: 600;
+}
+
+/* ---------- Combobox option list ---------- */
+.combobox-container .dropdown-menu,
+.daformfields .dropdown-menu {
+  border: 2px solid var(--wp-navy) !important;
+  border-radius: 4px;
+  padding: 0.25rem 0;
+}
+.combobox-container .dropdown-menu .dropdown-item,
+.combobox-container .dropdown-menu li a,
+.daformfields .dropdown-menu .dropdown-item {
+  color: var(--wp-ink) !important;
+  background: var(--wp-surface) !important;
+}
+.combobox-container .dropdown-menu .dropdown-item:hover,
+.combobox-container .dropdown-menu .dropdown-item:focus,
+.combobox-container .dropdown-menu li a:hover,
+.daformfields .dropdown-menu .dropdown-item:hover {
+  background: var(--wp-tint) !important;
+  color: var(--wp-navy) !important;
+}
+.combobox-container .dropdown-menu .dropdown-item.active,
+.combobox-container .dropdown-menu .active > a,
+.combobox-container .dropdown-menu .active > .dropdown-item,
+.daformfields .dropdown-menu .dropdown-item.active,
+.daformfields .dropdown-menu .dropdown-item:active {
+  background: var(--wp-navy) !important;
+  color: #FFFFFF !important;
 }
