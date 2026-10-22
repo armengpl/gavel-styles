@@ -43,3 +43,16 @@ button.btn.btn-da.btn-primary:hover {
   border-color: var(--wp-navy-dark) !important;
   color: #FFFFFF !important;
 }
+
+button.btn.btn-da.btn-secondary,
+button.btn.btn-da.btn-secondary:focus,
+button.btn.btn-da.btn-secondary:active {
+  
+  border-color: var(--wp-navy) !important;
+  color: black !important;
+}
+
+
+.daundertext {
+color: var(--wp-navy-dark) !important;
+}
