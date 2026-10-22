@@ -1,6 +1,6 @@
 /* ==========================================================
    Wick Phillips – Gavel questionnaire theme (high contrast)
-   Paste into: Workflow > Settings > Custom CSS (Styling)
+   Loaded by URL: Workflow > Settings > Custom CSS link
    ----------------------------------------------------------
    All colors live in the variables below. If you have the
    firm's exact brand hex codes, swap them in here and the
@@ -23,8 +23,23 @@
   --wp-font-ui: "Helvetica Neue", Arial, sans-serif;
 }
 
+/* ---------- Active navigation tab ---------- */
 .nav.nav-pills .nav-link.active {
-    background: var(--primary-light);
-    color: #14284B;
-    font-weight: bold;
+  background: var(--wp-tint) !important;
+  color: var(--wp-navy) !important;
+  font-weight: bold;
+}
+
+/* ---------- Continue button ---------- */
+button.btn.btn-da.btn-primary,
+button.btn.btn-da.btn-primary:focus,
+button.btn.btn-da.btn-primary:active {
+  background: var(--wp-navy) !important;
+  border-color: var(--wp-navy) !important;
+  color: #FFFFFF !important;
+}
+button.btn.btn-da.btn-primary:hover {
+  background: var(--wp-navy-dark) !important;
+  border-color: var(--wp-navy-dark) !important;
+  color: #FFFFFF !important;
 }
