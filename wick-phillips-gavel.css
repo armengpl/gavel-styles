@@ -245,13 +245,53 @@ button.btn.btn-da:focus-visible,
 }
 
 /* ---------- Plain dropdown options ----------
-   The dropdown keeps the browser's normal behavior. Browsers only let
-   a page color the options themselves; the hover highlight is drawn
-   by the operating system and can't be changed. */
-.daformfields select.dasingleselect option {
-  color: var(--wp-ink);
-  background: var(--wp-surface);
+   Hover colors need Chrome/Edge's "customizable select" mode. The rules
+   below pin the list directly under the field at full width with normal
+   spacing, so it behaves like a regular dropdown.
+   Firefox/Safari skip this block and show their normal list.
+   To undo: delete everything from here to the end of the file. */
+@supports (appearance: base-select) {
+  .daformfields select.dasingleselect,
+  .daformfields select.dasingleselect::picker(select) {
+    appearance: base-select;
+  }
+  .daformfields select.dasingleselect::picker-icon,
+  .daformfields select.dasingleselect option::checkmark {
+    display: none;
+  }
+
+  /* The open list: directly below the field, same width */
+  .daformfields select.dasingleselect::picker(select) {
+    position-area: block-end span-inline-end;
+    position-try-fallbacks: none;
+    width: anchor-size(width);
+    max-height: 18rem;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--wp-navy);
+    background: var(--wp-surface);
+  }
+
+  /* Options: normal spacing, combobox colors */
+  .daformfields select.dasingleselect option {
+    padding: 0.25rem 0.75rem;
+    color: var(--wp-ink);
+    background: var(--wp-surface);
+  }
+  .daformfields select.dasingleselect option:hover,
+  .daformfields select.dasingleselect option:focus-visible {
+    color: var(--wp-navy);
+    background: var(--wp-tint);
+    outline: none;
+  }
+  .daformfields select.dasingleselect option:checked {
+    color: #FFFFFF;
+    background: var(--wp-navy);
+  }
 }
+
+/* Browsers without that mode: at least color the chosen option */
 .daformfields select.dasingleselect option:checked {
   color: #FFFFFF;
   background: var(--wp-navy);
