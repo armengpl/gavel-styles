@@ -312,3 +312,8 @@ button.btn.btn-da:focus-visible,
   color: #FFFFFF;
   background: var(--wp-navy);
 }
+
+.nav-pills.nav-link:not(.active):not(.text-muted)::after{
+color: var(--wp-navy) !important;
+}
+
