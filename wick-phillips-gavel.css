@@ -2,9 +2,8 @@
    Wick Phillips – Gavel questionnaire theme (high contrast)
    Loaded by URL: Workflow > Settings > Custom CSS link
    ----------------------------------------------------------
-   All colors live in the variables below. If you have the
-   firm's exact brand hex codes, swap them in here and the
-   whole questionnaire updates.
+   All colors live in the variables below. Change a value here
+   and every rule that uses it updates.
    Contrast ratios are against white (#FFFFFF).
    ========================================================== */
 
@@ -30,6 +29,148 @@
   font-weight: bold;
 }
 
+/* ---------- Question heading ---------- */
+.da-page-header {
+  border-bottom: 2px solid var(--wp-navy);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.da-page-header h1,
+#daMainQuestion {
+  font-family: var(--wp-font) !important;
+  color: var(--wp-navy) !important;
+  font-weight: 700;
+}
+
+/* ---------- Field labels ---------- */
+.da-form-label,
+.da-field-container > .col-form-label {
+  color: var(--wp-ink) !important;
+  font-weight: 600;
+}
+
+/* ---------- Text, email, date, number, textarea, dropdown, combobox ---------- */
+.daformfields .form-control,
+.daformfields .form-select {
+  background-color: var(--wp-surface) !important;
+  color: var(--wp-ink) !important;
+  border: 2px solid var(--wp-line) !important;
+  border-radius: 4px;
+}
+.daformfields .form-control:hover,
+.daformfields .form-select:hover {
+  border-color: var(--wp-navy) !important;
+}
+.daformfields .form-control::placeholder,
+.daformfields .form-select::placeholder {
+  color: var(--wp-muted) !important;
+  opacity: 1;
+}
+
+/* Combobox: text box and its toggle button read as one control */
+.daformfields .combobox-container .input-group .form-select {
+  border-right: none !important;
+}
+.daformfields .dacomboboxtoggle {
+  background: var(--wp-surface) !important;
+  color: var(--wp-navy) !important;
+  border: 2px solid var(--wp-line) !important;
+  border-left: none !important;
+}
+.daformfields .dacomboboxtoggle:hover {
+  background: var(--wp-tint) !important;
+}
+
+/* ---------- Choice rows (yes/no, radio lists, checkboxes) ---------- */
+.da-field-radio label.labelauty,
+.da-field-radio input.labelauty + label,
+.da-field-checkboxes label.labelauty,
+.da-field-checkboxes input.labelauty + label {
+  background: var(--wp-surface) !important;
+  color: var(--wp-ink) !important;
+  border: 2px solid var(--wp-line) !important;
+  border-radius: 4px;
+}
+.da-field-radio input.labelauty + label:hover,
+.da-field-checkboxes input.labelauty + label:hover {
+  border-color: var(--wp-navy) !important;
+}
+
+/* Selected row: navy border, light tint, bold navy text */
+.da-field-radio input.labelauty:checked + label,
+.da-field-radio label[aria-checked="true"],
+.da-field-radio label.btn-primary,
+.da-field-checkboxes input.labelauty:checked + label,
+.da-field-checkboxes label[aria-checked="true"],
+.da-field-checkboxes label.btn-primary {
+  background: var(--wp-tint) !important;
+  color: var(--wp-navy) !important;
+  border-color: var(--wp-navy) !important;
+  font-weight: 600;
+}
+
+/* The box / circle is Gavel's icon span; we recolor it and hide the
+   icon glyph so Gavel's own colors can't show through. */
+.da-field-radio .labelauty-unchecked-image,
+.da-field-radio .labelauty-checked-image,
+.da-field-checkboxes .labelauty-unchecked-image,
+.da-field-checkboxes .labelauty-checked-image {
+  position: relative;
+  box-shadow: none !important;
+}
+.da-field-radio .labelauty-unchecked-image i,
+.da-field-radio .labelauty-checked-image i,
+.da-field-checkboxes .labelauty-unchecked-image i,
+.da-field-checkboxes .labelauty-checked-image i {
+  visibility: hidden !important;
+}
+
+/* Unchecked: white with navy outline */
+.da-field-radio .labelauty-unchecked-image,
+.da-field-checkboxes .labelauty-unchecked-image {
+  background: var(--wp-surface) !important;
+  border: 2px solid var(--wp-navy) !important;
+}
+
+/* Checked: solid navy */
+.da-field-radio .labelauty-checked-image,
+.da-field-checkboxes .labelauty-checked-image {
+  background: var(--wp-navy) !important;
+  border: 2px solid var(--wp-navy) !important;
+}
+
+/* Shapes: squares for checkboxes, circles for radios */
+.da-field-checkboxes .labelauty-unchecked-image,
+.da-field-checkboxes .labelauty-checked-image { border-radius: 4px !important; }
+.da-field-radio .labelauty-unchecked-image,
+.da-field-radio .labelauty-checked-image { border-radius: 50% !important; }
+
+/* White checkmark (checkboxes) */
+.da-field-checkboxes .labelauty-checked-image::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 30%;
+  height: 55%;
+  border: solid #FFFFFF;
+  border-width: 0 3px 3px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* White center dot (radios) */
+.da-field-radio .labelauty-checked-image::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transform: translate(-50%, -50%);
+}
+
 /* ---------- Continue button ---------- */
 button.btn.btn-da.btn-primary,
 button.btn.btn-da.btn-primary:focus,
@@ -37,6 +178,7 @@ button.btn.btn-da.btn-primary:active {
   background: var(--wp-navy) !important;
   border-color: var(--wp-navy) !important;
   color: #FFFFFF !important;
+  font-weight: 600;
 }
 button.btn.btn-da.btn-primary:hover {
   background: var(--wp-navy-dark) !important;
@@ -44,16 +186,42 @@ button.btn.btn-da.btn-primary:hover {
   color: #FFFFFF !important;
 }
 
-button.btn.btn-da.btn-secondary,
-button.btn.btn-da.btn-secondary:focus,
-button.btn.btn-da.btn-secondary:active {
-  
-  border-color: var(--wp-navy) !important;
-  color: black !important;
+/* ---------- "Save link to continue later" link ---------- */
+.daundertext a,
+.daundertext a:visited {
+  color: var(--wp-steel) !important;
+  text-decoration: underline !important;
+  font-weight: 600;
+}
+.daundertext a:hover,
+.daundertext a:focus {
+  color: var(--wp-navy-dark) !important;
 }
 
-.daundertext > a,
- {
-  color: var(--wp-navy-dark) !important;
-  
+/* ---------- Keyboard focus (all controls) ---------- */
+.daformfields .form-control:focus,
+.daformfields .form-select:focus,
+.daformfields .dacomboboxtoggle:focus-visible,
+.da-field-radio label:focus-visible,
+.da-field-checkboxes label:focus-visible,
+button.btn.btn-da:focus-visible,
+.daundertext a:focus-visible {
+  outline: 3px solid var(--wp-focus) !important;
+  outline-offset: 2px;
+  box-shadow: none !important;
+  border-color: var(--wp-navy) !important;
+}
+
+/* ---------- Validation errors ---------- */
+.daformfields .is-invalid,
+.da-has-error .form-control,
+.da-has-error .form-select {
+  border-color: var(--wp-error) !important;
+}
+.daformfields .invalid-feedback,
+.daformfields label.da-has-error,
+.daformfields .da-has-error-message,
+.daformfields .text-danger {
+  color: var(--wp-error) !important;
+  font-weight: 600;
 }
