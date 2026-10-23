@@ -334,5 +334,8 @@ button.btn.btn-da:focus-visible,
 
 #dadownloadform button[type="submit"]{
 
+color: var(--wp-navy) !important;
+}
+#daemailform button[type="submit"]{
 background: var(--wp-navy) !important;
 }
