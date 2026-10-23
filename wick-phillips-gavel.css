@@ -338,4 +338,5 @@ color: var(--wp-navy) !important;
 }
 #daemailform button[type="submit"]{
 background: var(--wp-navy) !important;
+   border-color: var(--wp-navy) !important;
 }
