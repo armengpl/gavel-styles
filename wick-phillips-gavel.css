@@ -317,3 +317,17 @@ button.btn.btn-da:focus-visible,
 .nav.nav-pills .nav-link:not(.active):not(.text-muted)::after {
   color: var(--wp-navy) !important;
 }
+
+.da-attachment-download-wrapper p a {
+    
+    color: var(--wp-navy) !important;
+}
+.da-attachment-download-wrapper p a {
+    
+    color: var(--wp-navy) !important;
+}
+
+.da-attachment-download-wrapper p a:hover {
+    
+    background: var(--wp-navy) !important;
+}
