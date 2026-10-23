@@ -331,3 +331,9 @@ button.btn.btn-da:focus-visible,
     color: white !important;
     background: var(--wp-navy) !important;
 }
+
+button.btn.btn-primary[type="submit"] {
+  /* styles */
+   background-color: var(--wp-navy) !important;
+}
+
