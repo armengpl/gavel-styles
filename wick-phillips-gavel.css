@@ -328,6 +328,6 @@ button.btn.btn-da:focus-visible,
 }
 
 .da-attachment-download-wrapper p a:hover {
-    
+    color: white !important;
     background: var(--wp-navy) !important;
 }
