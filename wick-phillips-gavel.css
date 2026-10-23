@@ -332,4 +332,7 @@ button.btn.btn-da:focus-visible,
     background: var(--wp-navy) !important;
 }
 
+#dadownloadform button[type="submit"]{
 
+background: var(--wp-navy) !important;
+}
